@@ -1,8 +1,8 @@
 let menu = {
   _courses: {
-  	appetizers: [],
-    mains: [],
-    desserts: [],
+  	_appetizers: [],
+    _mains: [],
+    _desserts: [],
 
     get appetizers() {
 			return this._appetizers;
@@ -46,12 +46,13 @@ let menu = {
   getRandomDishFromCourse(courseName) {
     let dishes = this._courses[courseName];
     let randomIndex = Math.floor(Math.random() * dishes.length);
+    return dishes[randomIndex];
   },
 
   generateRandomMeal(){
     let appetizer = this.getRandomDishFromCourse('appetizers');
-    let mains = this.getRandomDishFromCourse('mains');
-    let desserts = this.getRandomDishFromCourse('desserts');
+    let main = this.getRandomDishFromCourse('mains');
+    let dessert = this.getRandomDishFromCourse('desserts');
     let totalPrice = appetizer.price + main.price + dessert.price;
 
     return `Your meal is ${appetizer.name}, ${main.name}, and ${dessert.name}. The price is $${totalPrice}.`;
