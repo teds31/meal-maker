@@ -58,5 +58,16 @@ let menu = {
   }
 };
 
+menu.addDishToCourse('appetizers', 'mozzarella sticks', 4.50);
+menu.addDishToCourse('appetizers', 'fried zuchinni', 3.50);
+menu.addDishToCourse('appetizers', 'garlic knots', 2.50);
+menu.addDishToCourse('mains', 'pepparoni pizza', 6.50);
+menu.addDishToCourse('mains', 'chicken parm', 5.50);
+menu.addDishToCourse('mains', 'calzone', 6.25);
+menu.addDishToCourse('desserts', 'cheesecake', 3.00);
+menu.addDishToCourse('desserts', 'apple pie ice cream', 4.00);
+menu.addDishToCourse('desserts', 'tiramisu', 3.75);
+
+
 let meal = menu.generateRandomMeal();
 console.log(meal);
