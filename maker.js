@@ -1,36 +1,37 @@
 let menu = {
   _courses: {
-  	appetizers: ['mozzarella sticks', 'potato skins', 'fried zuchinni'],
-    mains: ['spicy wings', 'peparroni pizza', 'double bacon burger'],
-    desserts: ['cheesecake', 'apple pie', 'banana split']
+  	appetizers: [],
+    mains: [],
+    desserts: [],
+
+    get appetizers() {
+
+    },
+    set appetizers(appertizerIn) {
+
+    },
+
+    get mains() {
+
+    },
+    set mains(mainIn) {
+
+    },
+
+    get desserts() {
+
+    },
+    set desserts(dessertIn) {
+
+    }
   },
+
   get courses() {
     return {
     	appetizers: this._courses.appetizers,
     	mains: this._courses.mains,
       desserts: this._courses.desserts
     };
-  },
-
-  get appetizers() {
-
-  },
-  set appetizers(appertizerIn) {
-
-  },
-
-  get mains() {
-
-  },
-  set mains(mainIn) {
-
-  },
-
- 	get desserts() {
-
-  },
-  set desserts(dessertIn) {
-
   },
 
   addDishToCourse(courseName, dishName, dishPrice) {
@@ -67,6 +68,7 @@ menu.addDishToCourse('mains', 'calzone', 6.25);
 menu.addDishToCourse('desserts', 'cheesecake', 3.00);
 menu.addDishToCourse('desserts', 'apple pie ice cream', 4.00);
 menu.addDishToCourse('desserts', 'tiramisu', 3.75);
+
 
 
 let meal = menu.generateRandomMeal();
