@@ -1,8 +1,8 @@
 let menu = {
   _courses: {
-  	appetizers: [],
-    mains: [],
-    desserts: []
+  	appetizers: ['mozzarella sticks', 'potato skins', 'fried zuchinni'],
+    mains: ['spicy wings', 'peparroni pizza', 'double bacon burger'],
+    desserts: ['cheesecake', 'apple pie', 'banana split']
   },
   get courses() {
     return {
@@ -37,7 +37,9 @@ let menu = {
     let dish = {
       name: dishName,
       price: dishPrice
-    }
+    };
+
+    this._courses[courseName].push(dish);
   },
 
   getRandomDishFromCourse(courseName) {
@@ -54,5 +56,7 @@ let menu = {
     return `Your meal is ${appetizer.name}, ${main.name}, and ${dessert.name}. The price is $${totalPrice}.`;
 
   }
-
 };
+
+let meal = menu.generateRandomMeal();
+console.log(meal);
