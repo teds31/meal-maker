@@ -5,24 +5,24 @@ let menu = {
     desserts: [],
 
     get appetizers() {
-
+			return this._appetizers;
     },
     set appetizers(appertizerIn) {
-
+			this._appetizers = appertizinIn;
     },
 
     get mains() {
-
+			return this._mains;
     },
     set mains(mainIn) {
-
+			this._mains = mainIn;
     },
 
     get desserts() {
-
+			return this._desserts;
     },
     set desserts(dessertIn) {
-
+			this._desserts = desseretIn;
     }
   },
 
@@ -40,7 +40,7 @@ let menu = {
       price: dishPrice
     };
 
-    this._courses[courseName].push(dish);
+     this._courses[courseName].push(dish);
   },
 
   getRandomDishFromCourse(courseName) {
@@ -68,8 +68,6 @@ menu.addDishToCourse('mains', 'calzone', 6.25);
 menu.addDishToCourse('desserts', 'cheesecake', 3.00);
 menu.addDishToCourse('desserts', 'apple pie ice cream', 4.00);
 menu.addDishToCourse('desserts', 'tiramisu', 3.75);
-
-
 
 let meal = menu.generateRandomMeal();
 console.log(meal);
